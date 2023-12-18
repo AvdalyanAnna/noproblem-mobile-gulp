@@ -1,38 +1,152 @@
 //All styles can be added here.
-.hero-heading{
-    @apply text-4xl mb-10 text-white font-medium;
+:root{
+  --black:#000;
+  --black-1:#1F1F1F;
+  --212121:#212121;
+  --Enter:#A5A5A5;
+  --grey:#848484;
+  --gilroy:Gilroy;
+  --primary:#6125CE;
 }
 
-.instructions{    
-    .sub-title{
-        @apply text-gray-900 pb-2 border-b-2 border-gray-400 mb-5 text-xl font-medium;
 
-        & + p {
-            @apply mb-3
-        }
-    }
-    .code{
-        @apply block font-mono border rounded bg-gray-100 text-gray-700 px-4 py-5 leading-normal text-sm shadow;
+@import "fonts";
+@import "layout";
+@import "blockes";
 
-        &.pre{
-            @apply whitespace-pre;
-        }
 
-        em{
-            @apply opacity-75;
-        }
-    }
 
+body {
+  font-family: 'Gilroy', sans-serif;
+  max-width: 550px;
+  width: 100%;
+  margin: 0 auto;
+  @apply text-[16px];
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 60px 0 50px;
+  position: relative;
 }
 
-.social{
-    @apply block pt-6 text-gray-700;
+.main {
+  flex: 1;
 
-    a{
-        @apply text-blue-500 font-medium p-4;
+  &-content {
+    padding: 16px 0;
+  }
+}
 
-        &:hover{
-            @apply text-blue-700;
-        }
+.wrapper {
+  padding: 0 16px;
+}
+
+.title {
+  @apply font-[600];
+}
+
+.title-page {
+  color: #303849;
+  font-family: SF Pro Display;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px; /* 127.273% */
+  letter-spacing: 0.35px;
+}
+
+
+//Forms
+
+.input-group {
+  @apply block mb-[12px];
+  &__label {
+    @apply text-base block text-[#848484];
+    //after:content-['*']
+  }
+
+  &__input {
+    @apply mt-[3px] px-[16px] py-[12px] bg-[#FAFBFC] border shadow-sm border-[#E4E5E6] placeholder-slate-400 focus:outline-none focus:border-[#6125CE]  block w-full rounded-[8px] text-base  ;
+    &.error {
+      @apply border-[#E70053]
     }
+  }
+
+  &__error {
+    @apply text-[#E70053] mt-[4px] text-[12px];
+  }
+
+  &__radio {
+    @apply h-4 w-4 border-gray-300 text-[#6125CE] focus:ring-[#6125CE];
+
+    &-label {
+      @apply ml-[9px] block text-[16px] font-medium leading-6 text-[#1F1F1F]
+    }
+  }
+
+  &__code {
+    @apply flex justify-between;
+    //display: flex;
+    //justify-content: space-between;
+    max-width: 272px;
+    width: 100%;
+    margin: 26px auto 16px;
+
+    .input-group__input {
+      width: 56px;
+      height: 56px;
+      text-align: center;
+    }
+  }
+}
+
+
+.btn{
+  border-radius: 8px;
+  border: 2px solid #6125CE;
+  @apply font-semibold;
+  &-more{
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #6125CE;
+    border-radius: 50%;
+  }
+  &-primary {
+    @apply
+    py-[15px] px-4
+    bg-[#6125CE]
+    text-white
+    rounded-lg
+    focus:outline-none focus:ring-2
+    focus:ring-[#6125CE] focus:ring-opacity-75;
+    box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.09), 0px 4px 8px 0px rgba(0, 0, 0, 0.05), 0px 1px 4px 0px rgba(0, 0, 0, 0.03);
+  }
+}
+
+
+.text-grey {
+  @apply text-[#848484]
+}
+
+.text-primary {
+  @apply text-[#6125CE]
+}
+
+.auth-form {
+  @apply pt-[72px]
+}
+
+.recover {
+  &__btn {
+    @apply text-primary text-[16px]
+  }
+}
+
+.round{
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
 }

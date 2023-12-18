@@ -1,0 +1,66 @@
+.payment {
+  border-radius: 10px;
+  background: #FAFAFA;
+  padding: 16px;
+  position: relative;
+
+  &.active{
+    .payment-bottom{
+      display: block;
+    }
+    .payment-time{
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &-list {
+    margin: 16px 0;
+  }
+
+  &-item {
+    margin-bottom: 12px;
+  }
+
+  &-title {
+    color: var(--black);
+    font-family: var(--gilroy);
+    @apply text-[15px] font-[600] pb-[32px];
+  }
+
+  &-time {
+    color: var(--grey, #848484);
+    font-family: var(--gilroy);
+    position: absolute;
+    top: 49px;
+    opacity: 0;
+    visibility: hidden;
+    @apply text-[12px] font-[400] mb-[2px];
+  }
+
+  &-card {
+    color: var(--, #1F1F1F);
+    font-family: var(--gilroy);
+    @apply text-[14px] font-[400];
+  }
+
+  &-money {
+    color: var(--black);
+    font-family: var(--gilroy);
+    @apply text-[20px] font-[400] mb-[30px] pr-[16px] text-right;
+  }
+
+  &-date {
+    color: var(--grey, #848484);
+    font-family: var(--gilroy);
+    @apply text-[12px] font-[400] text-right;
+    &__time {
+      @apply inline-block mr-[12px];
+    }
+  }
+
+  &-bottom {
+    display: none;
+    @apply mt-[16px];
+  }
+}

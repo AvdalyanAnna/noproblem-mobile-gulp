@@ -1,0 +1,241 @@
+.vacancy {
+  &-header {
+    @apply flex mt-[26px];
+
+    &__left {
+      max-width: 109px;
+      width: 100%;
+    }
+
+    &__right {
+      flex: 1;
+      @apply ml-[7px];
+    }
+
+    &__avatar {
+      width: 100%;
+      height: 109px;
+      border-radius: 12px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: inherit;
+      }
+    }
+
+    &__date {
+      @apply mt-[6px] ml-[5px];
+      color: var(--Enter, #A5A5A5);
+      font-family: Mont;
+      font-size: 12px;
+      line-height: normal;
+      font-weight: 600;
+    }
+
+  }
+
+  &-heading {
+    padding: 4px 16px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: #F2F2F2;
+    color: #303849;
+    text-align: center;
+    font-family: var(--gilroy);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 1px;
+    @apply mb-[12px];
+  }
+
+  &-title {
+    color: var(--black-1, #1F1F1F);
+    font-family: var(--gilroy);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: normal;
+    @apply mb-[12px]
+  }
+
+  &-sub_title {
+    color: var(--black-1, #212121);
+    font-family: var(--gilroy);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &-status {
+    color: var(--212121, #212121);
+    font-family: Mont;
+    @apply flex  text-[14px] font-[400] ;
+    padding: 2px 14px;
+    align-items: center;
+
+    &__round {
+      background: #35B932;
+      border-radius: 50%;
+      @apply block mr-[8px] w-[12px] h-[12px];
+    }
+  }
+
+  &-city {
+    color: var(--212121, #212121);
+    font-family: var(--gilroy);
+    @apply flex  text-[14px] font-[600] mt-[8px] ;
+    padding: 2px 8px;
+    align-items: center;
+
+    &__svg {
+      @apply block mr-[8px];
+
+    }
+  }
+
+  &-btn {
+    padding: 12px;
+
+    &s {
+      padding: 24px 0;
+
+      &__inner {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 8px;
+
+        .btn {
+          max-width: calc(50% - (18px / 2));
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &-block {
+    padding: 24px 0;
+    border-top: 1px solid #848484;
+    border-bottom: 1px solid #848484;
+
+    &__city {
+      padding: 8px 2px;
+      margin: 12px 0 10px;
+    }
+
+    &__description {
+      max-width: 92%;
+      color: var(--black-1, #212121);
+      font-family: var(--gilroy);
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+}
+
+.skills {
+  padding: 24px 0;
+
+  &__box {
+    @apply flex mb-[12px];
+    align-items: center;
+
+    &-icon {
+      margin-right: 12px;
+      width: 30px;
+      height: 36px;
+    }
+  }
+
+  &__title {
+    color: var(--black-1, #212121);
+    font-family: var(--gilroy);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &__list {
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+
+    &:nth-last-child(1) {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background: #6125CE;
+      border-radius: 50%;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.timetable-box__mobile {
+  border: 1px solid #cfcfcf;
+  border-radius: 10px;
+  display: block;
+  max-width: 607px;
+  width: 100%;
+
+  &-item {
+    border-bottom: 1px solid #c8c8c8;
+    display: flex;
+    justify-content: space-between;
+
+    &:nth-last-child(1) {
+      border-bottom: 0;
+    }
+
+    &.disabled {
+      .timetable-box__mobile-item__inner-item {
+        color: #33333380;
+
+        .status {
+          opacity: 0.5;
+        }
+      }
+    }
+
+    &__inner {
+      &-item {
+        align-items: center;
+        display: flex;
+        line-height: normal;
+        white-space: nowrap;
+        font-size: 16px;
+        padding: 12px 20px;
+        width: auto;
+
+        &:last-child {
+          width: 250px;
+        }
+
+        .status {
+          background: #6125ce;
+          border-radius: 50%;
+          height: 12px;
+          margin-bottom: 0;
+          margin-right: 14px;
+          padding: 0;
+          width: 12px;
+        }
+      }
+    }
+  }
+}

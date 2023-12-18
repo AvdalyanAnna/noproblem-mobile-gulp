@@ -1,0 +1,55 @@
+.payment {
+  border-radius: 10px;
+  background: #FAFAFA;
+  padding: 16px;
+  position: relative;
+}
+.payment.active .payment-bottom {
+  display: block;
+}
+.payment.active .payment-time {
+  opacity: 1;
+  visibility: visible;
+}
+.payment-list {
+  margin: 16px 0;
+}
+.payment-item {
+  margin-bottom: 12px;
+}
+.payment-title {
+  color: var(--black);
+  font-family: var(--gilroy);
+  @apply text-[15px] font-[600] pb-[32px];
+}
+.payment-time {
+  color: var(--grey, #848484);
+  font-family: var(--gilroy);
+  position: absolute;
+  top: 49px;
+  opacity: 0;
+  visibility: hidden;
+  @apply text-[12px] font-[400] mb-[2px];
+}
+.payment-card {
+  color: var(--, #1F1F1F);
+  font-family: var(--gilroy);
+  @apply text-[14px] font-[400];
+}
+.payment-money {
+  color: var(--black);
+  font-family: var(--gilroy);
+  @apply text-[20px] font-[400] mb-[30px] pr-[16px] text-right;
+}
+.payment-date {
+  color: var(--grey, #848484);
+  font-family: var(--gilroy);
+  @apply text-[12px] font-[400] text-right;
+}
+.payment-date__time {
+  @apply inline-block mr-[12px];
+}
+.payment-bottom {
+  display: none;
+  @apply mt-[16px];
+}

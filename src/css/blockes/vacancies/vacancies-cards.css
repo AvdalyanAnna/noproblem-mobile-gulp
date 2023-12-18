@@ -1,0 +1,79 @@
+.vacancies-card {
+  border-radius: 8px;
+  background: #FFF;
+  box-shadow: 0px 1px 12px 0px rgba(0, 0, 0, 0.09), 0px 4px 8px 0px rgba(0, 0, 0, 0.05), 0px 1px 4px 0px rgba(0, 0, 0, 0.03);
+  margin-bottom: 16px;
+  padding: 12px 16px 8px;
+}
+.vacancies-card:nth-last-child(1) {
+  margin-bottom: 0;
+}
+.vacancies-cards {
+  margin: 12px 0;
+}
+.vacancies-card__filter {
+  color: var(--primary);
+  font-family: SF Pro Display;
+  @apply text-[16px] font-[600]  flex content-center  leading-[28px] tracking-[0.35px] mt-[12px];
+}
+.vacancies-card__header {
+  @apply flex justify-between mb-[14px];
+}
+.vacancies-card__footer {
+  @apply flex justify-between  mt-[24px];
+}
+.vacancies-card__title {
+  color: var(--212121, #212121);
+  font-family: SF Pro Display;
+  font-size: 18px;
+  font-weight: 500;
+  @apply text-[18px] font-[500];
+}
+.vacancies-card__time {
+  color: var(--Enter, #A5A5A5);
+  font-family: Mont;
+  @apply text-[12px] font-[600];
+}
+.vacancies-card__status {
+  color: var(--212121, #212121);
+  font-family: SF Pro Display;
+  margin-top: 3px;
+  @apply flex text-[12px] font-[400];
+}
+.vacancies-card__status-round {
+  background: #35B932;
+  border-radius: 50%;
+  @apply block mr-[4px] w-[16px] h-[16px];
+}
+.vacancies-card__description {
+  color: var(--212121, #212121);
+  font-family: SF Pro Display;
+  line-height: 140%;
+  @apply text-[14px] font-[400];
+}
+.vacancies-card__tag {
+  color: var(--black-1, #1F1F1F);
+  font-family: SF Pro Display;
+  padding: 8px 16px;
+  border-radius: 16px;
+  background: #F2F2F2;
+  @apply flex text-[12px] font-[400];
+}
+.vacancies-card__tag:not(:nth-last-child(1)) {
+  @apply mr-[8px];
+}
+.vacancies-card__tag svg {
+  margin-right: 5px;
+}
+.vacancies-card__tags {
+  @apply flex;
+}
+.vacancies-card__favorite {
+  @apply flex justify-end;
+}
+.vacancies-card__favorite.active svg {
+  fill: #6125ce;
+}
+.vacancies-card__favorite svg {
+  stroke: #6125ce;
+}

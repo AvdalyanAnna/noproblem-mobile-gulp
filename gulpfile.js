@@ -29,7 +29,7 @@ const autoprefixer = require('gulp-autoprefixer');
 //const webp = require('gulp-webp'); //For converting images to WebP format
 //const replace = require('gulp-replace'); //For Replacing img formats to webp in html
 const logSymbols = require('log-symbols'); //For Symbolic Console logs :) :P 
-
+const fileinclude = require('gulp-file-include');
 //Load Previews on Browser on dev
 function livePreview(done){
   browserSync.init({
@@ -50,8 +50,13 @@ function previewReload(done){
 
 //Development Tasks
 function devHTML(){
-  return src(`${options.paths.src.base}/**/*.html`).pipe(dest(options.paths.dist.base));
-} 
+  return src(`${options.paths.src.base}/**/*.html`)
+      .pipe(fileinclude({ // Add this line
+        prefix: '@@',
+        basepath: '@file'
+      }))
+      .pipe(dest(options.paths.dist.base));
+}
 
 function devStyles(){
   const tailwindcss = require('tailwindcss'); 
@@ -96,7 +101,11 @@ function devClean(){
 
 //Production Tasks (Optimized Build for Live/Production Sites)
 function prodHTML(){
-  return src(`${options.paths.src.base}/**/*.html`).pipe(dest(options.paths.build.base));
+  return src(`${options.paths.src.base}/**/*.html`)
+      .pipe(fileinclude({ // Add this line
+        prefix: '@@',
+        basepath: '@file'
+      })).pipe(dest(options.paths.build.base));
 }
 
 function prodStyles(){

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+</head>
+<body>
+<header></header>
+<main>
+    <div class="wrapper">
+        <div class="auth-form">
+            <h1 class="title text-[24px] mb-[18px] text-center">Регистрация</h1>
+            <form>
+                @@include('components/form/input.html', {
+                "label": "Ваш E-mail",
+                "placeholder": "Почта11",
+                "type": 'email',
+                "name": 'email',
+                "classInput": '',
+                "class": '',
+                "errorText": '',
+                })
+                @@include('components/form/input.html', {
+                "label": "Пароль",
+                "placeholder": "Пароль",
+                "type": 'password',
+                "name": 'password',
+                "classInput": '',
+                "class": '',
+                "errorText": '',
+                })
+                <div class="input-group ">
+                    <div class="input-group__label"> Зарегистрироваться как </div>
+                    <fieldset class="mt-4">
+                        <div class="space-y-4 flex items-center space-x-10 space-y-0">
+                            <div class="flex items-center">
+                                <input id="worker" name="notification-method" type="radio" checked class="input-group__radio ">
+                                <label for="worker" class=" input-group__radio-label ">Работодатель</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input id="worker1" name="notification-method" type="radio" class="h-4 w-4 border-gray-300 text-[#6125CE] focus:ring-[#6125CE]">
+                                <label for="worker1" class="ml-3 block text-sm font-medium leading-6 text-gray-900">Работник</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <button class="btn btn-primary w-full mt-[16px] mb-[12px]">Регистрация</button>
+            </form>
+            <div class="text-[#848484] text-center block text-[14px]">Уже есть аккаунт?  <a href="#"  class="link text-primary">Вход</a></div>
+        </div>
+    </div>
+</main>
+<footer></footer>
+</body>
+</html>
